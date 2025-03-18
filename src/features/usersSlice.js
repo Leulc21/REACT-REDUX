@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   users: [],
@@ -6,10 +6,10 @@ const initialState = {
 
 const usersSlice = createSlice({
   name: "users",
-  initialState,
+  initialState, 
   reducers: {
     addUser: (state, action) => {
-      state.users.push({ id: nanoid(), ...action.payload });
+        
     },
     updateUser: (state, action) => {
       const { id, name, email } = action.payload;
